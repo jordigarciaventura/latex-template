@@ -1,0 +1,25 @@
+\SetTblrInner{rowsep=0pt}
+\definecolor{Silver}{rgb}{0.8,0.8,0.8}
+\begin{longtblr}[
+  caption = {Tabla de concurrencia},
+  label = table:tabla_concurrencia
+]{
+  width = \linewidth,
+  colspec = {Q[96]Q[75]Q[79]Q[79]Q[79]Q[79]Q[79]Q[79]Q[79]Q[79]Q[96]},
+  cells = {c},
+  hlines = {Silver},
+  vlines = {Silver},
+  rowhead = 1,
+}
+             & \textbf{M1} & \textbf{M2} & \textbf{M3} & \textbf{M4} & \textbf{M5} & \textbf{M6} & \textbf{M7} & \textbf{M8} & \textbf{M9} & \textbf{M10} \\
+\textbf{M1}  & -           & NO          & NO          & SI          & SI          & SI          & SI          & SI          & SI          & SI           \\
+\textbf{M2}  & -           & -           & SI          & NO          & NO          & SI          & SI          & SI          & SI          & SI           \\
+\textbf{M3}  & -           & -           & -           & SI          & NO          & NO          & NO          & SI          & SI          & SI           \\
+\textbf{M4}  & -           & -           & -           & -           & SI          & SI          & SI          & NO          & SI          & SI           \\
+\textbf{M5}  & -           & -           & -           & -           & -           & SI          & SI          & NO          & NO          & SI           \\
+\textbf{M6}  & -           & -           & -           & -           & -           & -           & SI          & SI          & NO          & SI           \\
+\textbf{M7}  & -           & -           & -           & -           & -           & -           & -           & SI          & NO          & SI           \\
+\textbf{M8}  & -           & -           & -           & -           & -           & -           & -           & -           & SI          & NO           \\
+\textbf{M9}  & -           & -           & -           & -           & -           & -           & -           & -           & -           & NO           \\
+\textbf{M10} & -           & -           & -           & -           & -           & -           & -           & -           & -           & -            
+\end{longtblr}

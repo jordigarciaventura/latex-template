@@ -1,0 +1,30 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\subsection{Lists}
+
+\begin{enumerate}[label=\roman*]
+    \item First
+    \item Second
+\end{enumerate}
+
+\begin{enumerate}[label=\alph*.]
+    \item First
+    \item Second
+\end{enumerate}
+
+\begin{itemize}
+    \item[] First
+    \item[] Second
+        \begin{itemize}
+            \item[] Second.First 
+            \item[] Second.Second
+        \end{itemize}
+    \item[] Third
+        \begin{itemize}
+            \item[] Third.First
+        \end{itemize}
+\end{itemize}
+
+\end{document}

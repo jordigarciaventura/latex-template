@@ -1,0 +1,105 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\subsection{Color boxes}
+
+You can use the \mintinline{python}{while True:}.
+
+\codefile{\subfix{./media/codes/fibonacci.py}}{title=Code from file, label=mycode}{python}
+Like shown in code \ref{mycode}. \\
+
+\begin{code}[numbers=left]{title=Embbed code,label=mycode2}{java}
+while(true) {
+    System.out.println("Hello World");
+}
+\end{code}
+Like shown in code \ref{mycode2}. \\
+
+\begin{theorem}[title=Theorem,label=theolabel]
+Inner angles of a triangle adds 180 degrees. 
+\end{theorem}
+Like shown in theorem \ref{theolabel}.
+
+
+\begin{tcolorbox}[colframe=black!13]
+\begin{minted}{c}
+Shared int Lectores = Escritores = 0;
+SemáforoBinario Mutex = MutexR = MutexE = Leer = Esc = 1;
+\end{minted}
+\end{tcolorbox}
+\vspace{-11pt}
+\noindent
+\begin{minipage}[t]{0.47\linewidth}
+\begin{tcolorbox}[colframe=black!13]
+\begin{minted}{c}
+/* LECTOR */
+\end{minted}
+\end{tcolorbox}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.47\linewidth}
+\begin{tcolorbox}[colframe=black!13]
+\begin{minted}{c}
+/* ESCRITOR */
+\end{minted}
+\end{tcolorbox}
+\end{minipage}
+\end{document}
+
+\begin{commandblock}[label=cmd:sql]
+\mintinline{text}{# apt install mysql-server mysql-client}
+\end{commandblock}
+
+\begin{commandblock}[label=cmd:show]
+\mintinline{mysql}{mysql> SHOW TABLES;}
+\tcblower{}
+\begin{minted}[numbers=none]{text}
++------------------------+
+| Tables_in_participants |
++------------------------+
+| schools                |
+| scores                 |
+| students               |
++------------------------+
+\end{minted}
+\end{commandblock}
+
+\begin{tcolorbox}
+\say{When you visit our Website or navigate within our app (collectively referred to as ‘Website’)}
+\end{tcolorbox}
+
+\begin{tcolorbox}[colframe=black!13]
+\begin{minted}{c}
+A=B=C=D=E=F=0;
+CoBegin
+    M1; V(A, 2);
+    P(A); M2; V(B, 2);
+    P(A); M3; V(C, 3);
+    P(B); M4; V(D);
+    P(B); P(C); M5; V(D); V(E);
+    P(B); M6; V(E);
+    P(B); M7; V(E);
+    P(D, 2); M8; V(F);
+    P(E, 3); M9; V(F);
+    P(F, 2); M10;
+CoEnd
+\end{minted}
+\end{tcolorbox}
+
+\end{minipage}%
+\hfill
+\begin{minipage}{0.55\linewidth}
+    
+\begin{figure}[H]
+    \centering
+    \includegraphics[width= 0.99\linewidth]{\subfix{../media/figures/udl_logo}}\
+\end{figure}
+
+\begin{Verbatim}[fontsize=\scriptsize]
+lr-x------ 1 Francesc wheel 64 feb 24 09:35 0 -> /dev/null
+l-wx------ 1 Francesc wheel 64 feb 24 09:35 1 -> /home/Nando/.xsession-errors
+lrwx------ 1 Francesc wheel 64 feb 24 09:35 3 -> socket:[3634]
+\end{Verbatim}
+
+\end{minipage}

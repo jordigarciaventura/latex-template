@@ -1,0 +1,45 @@
+\ProvidesPackage{decorations}
+
+% COLORS
+\RequirePackage{xcolor}
+
+% highlight colors
+\definecolor{hlgreen}{RGB}{183,247,209}
+\definecolor{hlred}{RGB}{254,193,208}
+\definecolor{hlpurple}{RGB}{203,202,255}
+\definecolor{hlblue}{RGB}{173,236,244}
+\definecolor{hlyellow}{RGB}{255,239,158}
+\definecolor{hlorange}{RGB}{255,209,176}
+
+% default colors
+\definecolor{cblack}{RGB}{51,51,51}
+\definecolor{cdgray}{RGB}{90,90,90}
+\definecolor{cgray}{RGB}{140,140,140}
+\definecolor{clgray}{RGB}{191,191,191}
+\definecolor{cwhite}{RGB}{255,255,255}
+\definecolor{cpurple}{RGB}{87,36,194}
+\definecolor{cpink}{RGB}{182,41,212}
+\definecolor{cred}{RGB}{252,18,51}
+\definecolor{corange}{RGB}{251,95,44}
+\definecolor{cyellow}{RGB}{229,158,37}
+\definecolor{cgreen}{RGB}{24,168,65}
+\definecolor{ccyan}{RGB}{26,169,178}
+\definecolor{cblue}{RGB}{24,133,226}
+\definecolor{cdblue}{RGB}{13,58,153}
+
+% TEXT DECORATIONS
+\RequirePackage{soul}
+
+\newcommand{\hlc}[2][hlyellow]{{\sethlcolor{#1}\hl{#2}}}
+\newcommand{\ulc}[2][black]{{\setulcolor{#1}\ul{#2}}}
+\newcommand{\stc}[2][black]{{\setstcolor{#1}\textst{#2}}}
+
+
+% Bold              \textbf{...}
+% Italic            \textit
+% Slanted           \textsl{...}
+% Small caps        \textsc{...}
+% Highlight         \hlc[color?]{...}
+% Underline         \ulc[color?]{...}
+% Overstriking      \stc[color?]{...}
+% Colorize          \textcolor{ccolor}{...}

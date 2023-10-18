@@ -1,0 +1,18 @@
+\begin{longtblr}[
+    caption = {Relación entre runlevels y systemd targets},
+  ]{
+    width = \linewidth,
+    colspec = {Q[133]Q[198]Q[610]},
+    hline{1,9} = {-}{0.08em},
+    hline{2} = {-}{0.05em},
+    rowhead = 1,
+  }
+  {System V\\runlevel} & {systemd\\target}                                         & Descripción                                                \\
+  0                    & {runlevel0.target,\\halt.target,\\poweroff.target}        & Apagado del sistema                                        \\
+  1, S, single         & {runlevel1.target,\\rescue.target}                        & Modo de un solo usuario                                    \\
+  2, 4                 & {runlevel2.target,\\runlevel4.target,\\multi-user.target} & Defiinida por el usuario. Por defecto, como el runlevel 3. \\
+  3                    & {runlevel3.target,\\multi-user.target}                    & Multiusuario completo con red (no gráfico)                 \\
+  5                    & {runlevel5.target,\\graphical.target}                     & Multiusuario completo con red (gráfico)                    \\
+  6                    & {runlevel6.target,\\reboot.target}                        & Reinicio del sistema                                       \\
+  emergency            & emergency.target                                          & Shell de emergencia                                        
+  \end{longtblr}

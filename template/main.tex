@@ -1,0 +1,63 @@
+\documentclass[11pt]{article}
+\linespread{1.5}
+
+% SELECT LANGUAGE:
+\usepackage{preamble}
+% \usepackage[spanish]{preamble}
+
+% Help LaTeX Workshop citation browser parser
+\iffalse
+\addbibresource{bibliography.bib} 
+\fi
+
+\begin{document}
+
+{
+\pagenumbering{gobble} % Remove page numbering
+\hypersetup{hidelinks} % Hide link colors
+
+% Title
+\subfile{title}
+
+% Abstract
+% \subfile{abstract}
+
+\newpage
+
+% Table of Contents
+\tableofcontents
+\clearpage
+
+% List of *
+% \tcblistof[\section*]{code}{\codListTitle}                    % codes
+% \tcblistof[\section*]{theorem}{\theoListTitle}                % theorems
+% \renewcommand{\listfigurename}{\figListTitle}\listoffigures   % figures
+\renewcommand\listtablename{\tabListTitle}\listoftables       % tables
+}
+
+\clearpage
+\pagenumbering{arabic} % Add page numbering
+
+% ------------------------- CONTENT ------------------------- %
+
+\subfile{sections/introduction}
+\clearpage
+\subfile{examples/examples}
+\clearpage
+
+% ---------------------------------------------------------- %
+
+% Acronyms
+\printglossary[type=\acronymtype, title=\acrTitle]
+
+% Special terms
+\printglossary[title=\terTitle]
+
+% Bibliography
+\printbibliography[heading=bibintoc, title=\bibTitle]
+\clearpage
+
+% Appendix
+% \subfile{appendix}
+
+\end{document}

@@ -1,0 +1,124 @@
+\usepackage{silence}
+\WarningFilter{latex}{You have requested package}
+
+\ProvidesPackage{preamble}
+
+
+% STRUCTURE
+\usepackage{geometry}
+\geometry{a4paper, left=30mm, right=30mm, top=25mm, bottom=25mm}
+
+% FONTS
+\usepackage{amsmath}
+\usepackage[T1]{fontenc}
+\usepackage[scaled]{beramono}
+\usepackage[notextcomp]{stix2}
+\usepackage{microtype}
+\DisableLigatures{encoding = T1, family = tt* }
+
+% COLORS
+\usepackage{xcolor}
+\usepackage{color}
+
+% FIGURES
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage[section]{placeins} % Keep figure inside section
+\usepackage{subcaption}
+
+% TABLES
+\usepackage[longtable]{multirow}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{tabulary}
+\renewcommand{\arraystretch}{1.2} 
+\usepackage{tabularray}
+\usepackage{array}
+\usepackage{ragged2e}
+\usepackage{colortbl}
+
+% LISTS
+\usepackage{enumitem}
+\setlist{nosep}
+
+% LINKS
+\usepackage{hyperref}
+
+\hypersetup{
+    breaklinks=true,
+    colorlinks, % Do not use boxes
+    % allcolors=blue,
+    }
+\urlstyle{same} % Keep font style
+
+% GLOSSARIES AND ACRONYMS
+\usepackage[acronym, toc]{glossaries}
+\makeglossaries
+\loadglsentries{glossaries}
+% \glsdisablehyper
+
+% FOOTNOTES
+\usepackage{cleveref}
+
+\crefformat{footnote}{\textsuperscript{#2#1#3}}
+\crefmultiformat{footnote}
+    {\textsuperscript{#2#1#3}}
+    {\textsuperscript{,#2#1#3}}
+    {\textsuperscript{,#2#1#3}}
+    { \textsuperscript{,#2#1#3}}
+\crefrangeformat{footnote}{\textsuperscript{#3#1#4-#5#2#6}}
+
+% URLs
+\usepackage{url}
+\usepackage{xurl}
+\def\UrlFont{\em} % Italize urls
+
+% QUOTATIONS
+\usepackage{dirtytalk} % \say{<text>} for "<text>"
+
+% TOC
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}} % Add dots at sections
+
+% TRANSLATIONS
+\DeclareOption{spanish}{}
+\DeclareOption*{\PackageWarning{preamble}{Unknown "\CurrentOption"}}
+\ProcessOptions\relax
+
+\@ifpackagewith{preamble}{spanish}{
+    \usepackage[spanish,es-lcroman]{babel}
+    \usepackage[spanish]{./packages/colorboxes}
+    \renewcommand\spanishtablename{Tabla}
+    \newcommand{\bibTitle}{Bibliografía}
+    \newcommand{\acrTitle}{Acrónimos}
+    \newcommand{\terTitle}{Términos especiales}
+    \newcommand{\figListTitle}{Lista de figuras}
+    \newcommand{\tabListTitle}{Lista de tablas}
+    \newcommand{\codListTitle}{Lista de códigos}
+    \newcommand{\theoListTitle}{Lista de teoremas}
+    \DefTblrTemplate{contfoot-text}{default}{Continuado en la próxima página}
+    \DefTblrTemplate{conthead-text}{default}{(Continuado)}
+}{
+    \newcommand{\bibTitle}{Bibliography}
+    \newcommand{\acrTitle}{Acronyms}
+    \newcommand{\terTitle}{Special terms}
+    \newcommand{\figListTitle}{List of figures}
+    \newcommand{\tabListTitle}{List of tables}
+    \newcommand{\codListTitle}{List of codes}
+    \newcommand{\theoListTitle}{List of theorems}
+}
+
+% UTILS
+\usepackage{./packages/colorboxes}
+\usepackage{./packages/decorations}
+
+% DEPENDENCIES
+\usepackage{xr}
+\usepackage{import}
+\usepackage{subfiles}
+\externaldocument[:]{\subfix{main}}
+
+% BIBLIOGRAPHY
+\usepackage[block=ragged, style=numeric]{biblatex}
+\addbibresource{\subfix{bibliography.bib}}
+\usepackage{csquotes}

@@ -1,0 +1,54 @@
+{
+  "files.eol": "\n",
+  "latex-workshop.docker.enabled": true,
+  "latex-workshop.docker.image.latex": "texlive/texlive",
+  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.latex.rootFile.doNotPrompt": true,
+  "latex-workshop.latex.outDir": "./out",
+  "latex-workshop.latex.autoBuild.run": "never",
+  "latex-workshop.synctex.afterBuild.enabled": true,
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "Fast",
+      "tools": [
+        "latexmk"
+      ]
+    },
+    {
+      "name": "Complete",
+      "tools": [
+        "latexmk",
+        "makeglossaries",
+        "latexmk"
+      ]
+    }
+  ],
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk",
+      "command": "latexmk",
+      "args": [
+        "-shell-escape",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-pdflua",
+        "-cd",
+        "-outdir=./out",
+        "-file-line-error",
+        "%DOC%"
+      ]
+    },
+    {
+      "name": "makeglossaries",
+      "command": "makeglossaries",
+      "args": [
+        "-d%OUTDIR%",
+        "%DOCFILE%"
+      ]
+    }
+  ],
+  "latex-workshop.message.latexlog.exclude": [
+    "glossaries",
+    "Underfull"
+  ]
+}
