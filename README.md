@@ -55,7 +55,7 @@ You can use both methods because they use the same LaTeX image (no extra space n
     ├── sections/           Split the project in subfiles (e.g. by section)
     ├── abstract.tex        Abstract
     ├── appendix.tex        Appendix
-    ├── bibliography.bib    Bibliography in BibTeX or BibLaTeX format
+    ├── bibliography.bib    Bibliography in BibLaTeX format
     ├── glossaries.tex      Special terms and acronyms
     ├── main.tex            Root file
     ├── preamble.sty        All dependencies and configurations
